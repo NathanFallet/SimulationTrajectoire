@@ -18,8 +18,8 @@ plt.subplots_adjust(bottom=0.2)
 
 # Constantes de la simulation
 gterre = 9.81 # m/s^2
-v0 = 20 # m/s
-alpha = 50 # rad
+v0 = 50 # m/s
+alpha = 45 # rad
 
 # On calcul les coordonnées de v0
 v0a = ax.add_patch(Arrow(0, 0, 0, 0, color='r', label='v0'))
@@ -32,7 +32,7 @@ l, = plt.plot([], [], 'ob', label='y=f(x)')
 
 # Sliders (pour changer les réglages)
 ax_v0 = plt.axes([0.25, 0.1, 0.65, 0.03])
-slider_v0 = Slider(ax_v0, 'v0', 5, 30, valinit=v0)
+slider_v0 = Slider(ax_v0, 'v0', 5, 100, valinit=v0)
 
 ax_alpha = plt.axes([0.25, 0.05, 0.65, 0.03])
 slider_alpha = Slider(ax_alpha, 'alpha', 1, 90, valinit=alpha)
